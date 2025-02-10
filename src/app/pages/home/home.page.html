@@ -1,13 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content fullscreen class="home-content">
+  <!-- Hero Banner Section -->
+  <div class="hero-banner">
+    <img src="assets/images/hero-banner.jpg" alt="Bamboo Furniture" class="hero-img" />
+    <div class="hero-text">
+      <h1>{{ tagline }}</h1>
+      <ion-button expand="block" color="secondary" routerLink="/products">Shop Now</ion-button>
+    </div>
+  </div>
+
+  <!-- About Us Section -->
+  <ion-card class="about-card">
+    <ion-card-header>
+      <ion-card-title>Our Story</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Founded by passionate artisans, our furniture is a blend of traditional craftsmanship and sustainable practices. Each piece is handcrafted with care to bring natural beauty and elegance to your home.
+      </p>
+      <ion-button fill="outline" color="primary" routerLink="/about">Learn More</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Featured Products Section -->
+  <div class="featured-products">
+    <h2>Featured Products</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4" *ngFor="let product of featuredProducts">
+          <ion-card routerLink="/product/{{product.id}}">
+            <img [src]="product.image" alt="{{ product.name }}" class="product-img" />
+            <ion-card-header>
+              <ion-card-title>{{ product.name }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p class="price">{{ product.price | currency }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Testimonials Section -->
+  <ion-card class="testimonials">
+    <ion-card-header>
+      <ion-card-title>Testimonials</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>"The quality and design are exceptional. I love my new bamboo chair!" – Sarah W.</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title size="small" class="ion-text-center">
+      © 2025 Bamboo & Cane Furniture Shop
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
