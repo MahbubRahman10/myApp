@@ -11,14 +11,13 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule  // Add this to enable routerLink
+    RouterModule 
   ]
 })
 export class HomePage {
   title: string = 'Bamboo & Cane Furniture Shop';
   tagline: string = 'Discover Natural Elegance';
 
-  // Sample featured products data
   featuredProducts = [
     { id: 1, name: 'Eco Bamboo Chair', image: 'assets/images/chair.jpg', price: 120 },
     { id: 2, name: 'Handcrafted Cane Sofa', image: 'assets/images/sofa.jpg', price: 450 },
