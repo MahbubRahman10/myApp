@@ -17,6 +17,4 @@ export class ApiService {
   getProducts(): Observable<any> {
     return this.http.get(`${this.baseUrl}/products`);
   }
-
-  // Add more methods for orders, payments, coupons, etc.
 }

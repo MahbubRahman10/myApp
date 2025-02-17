@@ -20,7 +20,6 @@ import { FormsModule } from '@angular/forms';
   ]
 })
 
-
 export class LoginPage {
   credentials = { email: '', password: '' };
 
