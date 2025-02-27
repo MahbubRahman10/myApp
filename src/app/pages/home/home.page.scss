@@ -26,41 +26,147 @@
     }
   
     .about-card {
-      margin: 1rem 0;
+      background: #ffffff; // White background for a clean look
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      border: 1px solid #ddd; // Light border for subtle effect
+    
       ion-card-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #2c3e50; // Dark gray title for contrast
       }
+    
+      p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+    
+      ion-button {
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 25px;
+        padding: 10px 20px;
+        color: white;
+        text-transform: uppercase;
+      }
+    
     }
+    
+    
   
     .featured-products {
-      margin: 2rem 0;
+      text-align: center;
+      padding: 1.5rem;
+      background: #ffffff; 
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
       h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+      }
+    
+      .product-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
         text-align: center;
-        margin-bottom: 1rem;
-        font-weight: bold;
-      }
-      ion-card {
-        margin: 0.5rem;
-      }
-      .product-img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .price {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: var(--ion-color-primary);
+    
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+    
+        .product-img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 12px 12px 0 0;
+        }
+    
+        .product-title {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #333;
+          margin-top: 10px;
+        }
+    
+        .price {
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: #1e88e5;
+          margin-top: 10px;
+        }
       }
     }
+    
   
     .testimonials {
-      margin: 2rem 0;
-      p {
-        font-style: italic;
+      text-align: center;
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+      ion-card-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #333;
+      }
+    
+      .testimonial {
+        border-bottom: 1px solid #ddd;
+        padding: 1rem 0;
         text-align: center;
+    
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+    
+      .testimonial-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid var(--ion-color-primary);
+      }
+    
+      h3 {
+        font-size: 1.2rem;
+        color: var(--ion-color-primary);
+      }
+    
+      .stars {
+        color: #ffcc00;
+        font-size: 1.2rem;
+        margin: 5px 0;
+      }
+    
+      .review-text {
+        font-style: italic;
+        color: #555;
+        font-size: 1rem;
       }
     }
+    
+    
+
   }
   
   ion-footer {

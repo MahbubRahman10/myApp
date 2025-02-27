@@ -10,7 +10,7 @@
 
 <ion-content fullscreen class="home-content">
   <div class="hero-banner">
-    <img src="assets/images/hero-banner.jpg" alt="Bamboo Furniture" class="hero-img" />
+    <img src="assets/images/1.jpg" alt="Bamboo Furniture" class="hero-img" />
     <div class="hero-text">
       <h1>{{ tagline }}</h1>
       <ion-button expand="block" color="secondary" routerLink="/products">Shop Now</ion-button>
@@ -23,47 +23,62 @@
     </ion-card-header>
     <ion-card-content>
       <p>
-        Founded by passionate artisans, our furniture is a blend of traditional craftsmanship and sustainable practices. Each piece is handcrafted with care to bring natural beauty and elegance to your home.
+        Founded by passionate artisans, our furniture is a blend of traditional craftsmanship and sustainable practices.
+        Each piece is handcrafted with care to bring natural beauty and elegance to your home.
       </p>
-      <ion-button fill="outline" color="primary" routerLink="/about">Learn More</ion-button>
+      <ion-button fill="solid" color="primary" expand="block" routerLink="/about">Learn More</ion-button>
     </ion-card-content>
   </ion-card>
+  
+  
 
   <!-- Featured Products Section -->
-  <div class="featured-products">
+  <ion-card class="featured-products">
     <h2>Featured Products</h2>
     <ion-grid>
       <ion-row>
-        <ion-col size="12" size-md="4" *ngFor="let product of featuredProducts">
-          <ion-card routerLink="/product/{{product.id}}">
+        <ion-col size="12" size-sm="6" size-md="4" *ngFor="let product of featuredProducts">
+          <ion-card class="product-card" routerLink="/product/{{product.id}}">
             <img [src]="product.image" alt="{{ product.name }}" class="product-img" />
             <ion-card-header>
-              <ion-card-title>{{ product.name }}</ion-card-title>
+              <ion-card-title class="product-title">{{ product.name }}</ion-card-title>
             </ion-card-header>
             <ion-card-content>
-              <p class="price">{{ product.price | currency }}</p>
+              <p class="price">৳ {{ product.price | currency:'BDT':'' }}</p>
             </ion-card-content>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
-  </div>
+  </ion-card>
+  
 
   <!-- Testimonials Section -->
   <ion-card class="testimonials">
     <ion-card-header>
-      <ion-card-title>Testimonials</ion-card-title>
+      <ion-card-title>What Our Customers Say</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>"The quality and design are exceptional. I love my new bamboo chair!" – Sarah W.</p>
+      <div *ngFor="let review of testimonials" class="testimonial">
+        <div class="testimonial-header">
+          <img [src]="review.image" alt="Customer" class="testimonial-img" />
+          <h3>{{ review.name }}</h3>
+        </div>
+        <p class="stars">
+          <ion-icon name="star" *ngFor="let star of getStars(review.rating)"></ion-icon>
+        </p>
+        <p class="review-text">"{{ review.message }}"</p>
+      </div>
     </ion-card-content>
   </ion-card>
+  
+  <ion-footer>
+    <ion-toolbar color="primary">
+      <ion-title size="small" class="ion-text-center">
+        © 2025 Rahman Cane House
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
-    <ion-title size="small" class="ion-text-center">
-      © 2025 Bamboo & Cane Furniture Shop
-    </ion-title>
-  </ion-toolbar>
-</ion-footer>
