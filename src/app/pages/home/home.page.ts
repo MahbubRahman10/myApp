@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,23 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule
+    RouterModule,
+    TranslateModule,
+    FormsModule 
   ]
 })
 export class HomePage {
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en'); 
+  }
+
+  switchLanguage(lang: string) {
+    this.translate.use(lang);
+  }
+
   title: string = 'Bamboo & Cane Furniture Shop';
   tagline: string = 'Discover Natural Elegance';
+  selectedLanguage = 'en';
 
   isFooterVisible = false;
 
