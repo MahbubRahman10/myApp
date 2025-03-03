@@ -32,8 +32,6 @@ export class HomePage {
   selectedLanguage = 'en';
 
   isFooterVisible = false;
-
- 
   
   featuredProducts = [
     { id: 1, name: 'Eco Bamboo Chair', image: 'assets/images/2.jpg', price: 1500 },
