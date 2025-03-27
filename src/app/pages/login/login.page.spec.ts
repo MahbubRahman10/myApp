@@ -10,5 +10,4 @@ describe('LoginPage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
 });
