@@ -36,8 +36,7 @@ export class HomePage {
   featuredProducts = [
     { id: 1, name: 'Eco Bamboo Chair', image: 'assets/images/2.jpg', price: 1500 },
     { id: 2, name: 'Handcrafted Cane Sofa', image: 'assets/images/3.jpg', price: 1800 },
-    { id: 3, name: 'Rustic Bamboo Table', image: 'assets/images/4.jpg', price: 2300 },
-    { id: 4, name: 'Rustic Bamboo Table', image: 'assets/images/4.jpg', price: 2300 }
+    { id: 3, name: 'Rustic Bamboo Table', image: 'assets/images/4.jpg', price: 2300 }
   ];
 
 
