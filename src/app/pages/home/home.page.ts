@@ -58,6 +58,13 @@ export class HomePage {
       image: 'assets/images/5.jpg',
       rating: 5,
       message: 'Eco-friendly and stylish! Fits perfectly in my living room.'
+    },
+    ,
+    {
+      name: 'Emily R.',
+      image: 'assets/images/5.jpg',
+      rating: 5,
+      message: 'Eco-friendly and stylish! Fits perfectly in my living room.'
     }
   ];
 
