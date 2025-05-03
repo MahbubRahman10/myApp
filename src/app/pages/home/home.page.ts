@@ -59,11 +59,10 @@ export class HomePage {
       rating: 5,
       message: 'Eco-friendly and stylish! Fits perfectly in my living room.'
     },
-    ,
     {
-      name: 'Emily R.',
+      name: 'Resis',
       image: 'assets/images/5.jpg',
-      rating: 5,
+      rating: 3,
       message: 'Eco-friendly and stylish! Fits perfectly in my living room.'
     }
   ];
