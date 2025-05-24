@@ -12,4 +12,10 @@ import { CommonModule } from '@angular/common';
     IonicModule
   ]
 })
-export class ProfilePage { }
+export class ProfilePage { 
+
+  user: string = "";
+  ngInit(){ 
+
+  }
+}
