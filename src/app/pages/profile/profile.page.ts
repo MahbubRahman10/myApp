@@ -16,6 +16,10 @@ export class ProfilePage {
 
   user: string = "";
   ngInit(){ 
+  
+  }
 
+  gettUser(): void {
+   
   }
 }
