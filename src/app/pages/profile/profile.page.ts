@@ -19,7 +19,11 @@ export class ProfilePage {
   
   }
 
-  gettUser(): void {
+  getUser(): void {
+   
+  }
+
+  setUser(): void {
    
   }
 }
