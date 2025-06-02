@@ -18,12 +18,4 @@ export class ProfilePage {
   ngInit(){ 
   
   }
-
-  getUser(): void {
-   
-  }
-
-  setUser(): void {
-   
-  }
 }
