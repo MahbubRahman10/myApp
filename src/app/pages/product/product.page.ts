@@ -12,4 +12,10 @@ import { CommonModule } from '@angular/common';
     IonicModule
   ]
 })
-export class ProductPage { }
+export class ProductPage {
+
+  init(){
+  
+  }
+
+}
