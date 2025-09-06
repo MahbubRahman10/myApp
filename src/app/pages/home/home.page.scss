@@ -26,17 +26,16 @@
     }
   
     .about-card {
-      background: #ffffff; // White background for a clean look
+      background: #ffffff; 
       border-radius: 12px;
       padding: 1.5rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      border: 1px solid #ddd; // Light border for subtle effect
-    
+      border: 1px solid #ddd; 
       ion-card-title {
         font-size: 1.6rem;
         font-weight: bold;
-        color: #2c3e50; // Dark gray title for contrast
+        color: #2c3e50;
       }
     
       p {
