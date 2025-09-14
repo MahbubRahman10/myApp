@@ -29,6 +29,7 @@ export class LoginPage {
     private router: Router
   ) {}
 
+ // Method to handle user login  
   login() {
     this.apiService.login(this.credentials).subscribe(
       (response) => {
