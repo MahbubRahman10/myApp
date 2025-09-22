@@ -65,5 +65,5 @@ export class ProductPage {
     });
     saveAs(data, `${fileName}_${new Date().getTime()}.xlsx`);
   }
-
+  
 }
